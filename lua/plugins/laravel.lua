@@ -1,5 +1,19 @@
 return {
   {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters_by_ft = {
+        php = { "phpcs" }, -- only run phpcs
+      },
+      linters = {
+        phpcs = {
+          -- Use PSR-12, which matches Laravel style
+          args = { "--standard=PSR12", "--report=emacs", "-" },
+        },
+      },
+    },
+  },
+  {
     "adalessa/laravel.nvim",
     dependencies = {
       "tpope/vim-dotenv",
