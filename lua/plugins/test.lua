@@ -13,6 +13,17 @@ return {
   {
     "nvim-neotest/neotest",
     dependencies = {
+      "arthur944/neotest-bun",
+    },
+    opts = {
+      adapters = {
+        ["neotest-bun"] = {},
+      },
+    },
+  },
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
       "olimorris/neotest-phpunit",
     },
     opts = {
